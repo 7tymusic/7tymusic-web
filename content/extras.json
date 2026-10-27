@@ -1,0 +1,18 @@
+{
+  "sparks": {
+    "on": true,
+    "reward": "",
+    "code": "",
+    "link": ""
+  },
+  "trash": [],
+  "night": true,
+  "saver": true,
+  "status": {
+    "state": "",
+    "slots": null,
+    "note": "",
+    "until": "",
+    "updated": ""
+  }
+}

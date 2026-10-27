@@ -1,0 +1,11 @@
+{
+  "drop": {
+    "hideName": false,
+    "teaser": true,
+    "channel": "",
+    "channelLabel": "",
+    "newDays": 7
+  },
+  "voices": [],
+  "every": 3
+}

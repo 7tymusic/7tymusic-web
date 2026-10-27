@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada · 7TY</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0a0509; color: #ffe9f4; font-family: "VT323", ui-monospace, monospace; text-align: center; padding: 24px; box-sizing: border-box; }
+  h1 { margin: 0; font: 900 clamp(90px, 22vw, 200px)/.85 "Big Shoulders Display", Impact, sans-serif; color: #ffe9f4; text-shadow: 0 0 10px #ff0a8a, 0 0 30px #ff0a8a; }
+  p { font-size: 26px; color: #ff5aae; margin: 18px 0 26px; }
+  a { display: inline-block; padding: 12px 20px; border: 2px solid #ff0a8a; border-radius: 999px; color: #ff5aae; text-decoration: none; font-size: 24px; }
+</style>
+</head>
+<body>
+<main><h1>404</h1><p>SEÑAL PERDIDA · ESTA PÁGINA NO EXISTE</p><a href="/" id="home">Volver a 7TY</a></main>
+<script>
+  // En GitHub Pages sin dominio propio la web vive en /nombre-del-repo/
+  var base = "/";
+  if (/\.github\.io$/.test(location.hostname)) { var seg = location.pathname.split("/").filter(Boolean)[0]; if (seg) base = "/" + seg + "/"; }
+  document.getElementById("home").href = base;
+  // Tipografías desde la propia web
+  var st = document.createElement("style");
+  st.textContent = '@font-face{font-family:"Big Shoulders Display";font-weight:900;font-display:swap;src:url(' + base + 'assets/fonts/big-shoulders-display-latin-900-normal.woff2) format("woff2")}@font-face{font-family:"VT323";font-display:swap;src:url(' + base + 'assets/fonts/vt323-latin-400-normal.woff2) format("woff2")}';
+  document.head.appendChild(st);
+</script>
+</body>
+</html>

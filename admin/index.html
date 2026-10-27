@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel 7TY</title>
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+  body { padding-bottom: 110px; }
+  .adm { max-width: 1100px; margin: 0 auto; padding: 28px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 24px; }
+  .adm-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+  .adm-head .neon { font-size: clamp(44px, 7vw, 72px); line-height: 1.05; }
+  .adm-head p { margin: 0; color: var(--muted); max-width: 52ch; }
+  .login { max-width: 560px; }
+  .login .pn-form { padding: 4px 0; }
+  .pubbar { position: fixed; z-index: 70; left: 0; right: 0; bottom: 0; padding: 12px max(16px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    background: linear-gradient(to bottom, var(--chrome-hi), var(--chrome) 50%, var(--chrome-mid) 51%, var(--chrome)); border-top: 2px solid var(--void); color: var(--chrome-ink); }
+  .pubbar .in { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+  .pubbar .st { font: 22px/1.1 var(--f-lcd); background: var(--screen); color: var(--lcd); padding: 6px 12px; border-radius: var(--r-sm); min-width: 0; flex: 1 1 260px; }
+  .pubbar .acts { display: flex; gap: 10px; flex-wrap: wrap; }
+  .pubbar a { color: var(--chrome-ink); font-weight: 700; }
+  .mini.play { min-width: 34px; }
+  .new-tag { font: 700 10px/1 var(--f-body); letter-spacing: .1em; color: var(--on-hot); background: var(--baby); border-radius: var(--r-pill); padding: 3px 7px; margin-left: 6px; vertical-align: middle; }
+  .pn-items { max-height: 62vh; }
+/* ── panel: lista de lanzamiento ── */
+.ck-head { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between; }
+.ck-head h3 { margin: 0; font: 900 26px/1 var(--f-display); text-transform: uppercase; }
+.ck-head span { font: 22px/1 var(--f-lcd); color: var(--lcd); }
+.ck-bar { height: 10px; margin: 10px 0 16px; border-radius: 5px; background: var(--screen); border: 1.5px solid var(--line); overflow: hidden; }
+.ck-bar i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, var(--hot) 0 8px, var(--bubble) 8px 10px); box-shadow: 0 0 8px var(--hot); transition: width .3s; }
+.ck-group { margin: 14px 0 6px; font: 700 11px/14px var(--f-body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.ck { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 12px; border: 1.5px solid var(--line); border-radius: var(--r-sm); margin-bottom: 6px; background: var(--surface); }
+.ck b { display: block; font: 800 18px/1.1 var(--f-display); text-transform: uppercase; }
+.ck span.d { display: block; font-size: 12px; line-height: 16px; color: var(--muted); }
+.ck-i { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 700 14px/1 var(--f-body); border: 2px solid var(--line); color: var(--muted); }
+.ck.ok { opacity: .72; } .ck.ok .ck-i { background: var(--hot); border-color: var(--hot); color: var(--on-hot); }
+.ck.no { border-color: var(--hot); } .ck.no .ck-i { border-color: var(--hot); color: var(--hot-text); }
+.ck-off { margin: 6px 0 0; padding-left: 18px; font-size: 13px; line-height: 20px; color: var(--muted); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="s-wings" viewBox="0 0 600 300"><g><path d="M314 136 L315 133 L315 129 L316 125 L317 121 L318 117 L318 114 L319 110 L320 106 L322 103 L323 99 L324 96 L326 92 L327 89 L329 85 L331 82 L333 79 L335 76 L337 72 L340 69 L342 67 L345 64 L348 61 L350 58 L353 56 L356 54 L360 51 L363 49 L366 47 L366 47 L363 49 L359 50 L355 52 L352 54 L349 56 L345 58 L342 61 L339 63 L336 66 L333 69 L330 72 L328 75 L325 78 L323 81 L320 85 L318 88 L316 92 L314 96 L312 99 L311 103 L309 107 L308 111 L306 114 L305 118 L304 122 L303 126 L302 130 L301 134Z M316 145 L319 140 L323 134 L327 129 L330 123 L334 118 L338 113 L342 107 L346 102 L351 97 L355 92 L359 87 L364 83 L369 78 L373 73 L378 69 L383 65 L388 60 L394 56 L399 52 L405 49 L410 45 L416 42 L422 38 L428 35 L434 32 L440 30 L446 27 L452 25 L452 25 L446 26 L439 28 L433 30 L426 32 L420 35 L413 37 L407 40 L401 43 L395 46 L389 50 L383 53 L378 57 L372 61 L366 65 L361 69 L356 74 L350 78 L345 83 L340 88 L335 92 L330 97 L326 102 L321 107 L317 113 L312 118 L308 123 L304 129 L299 134Z M364 78 L369 78 L374 78 L379 78 L384 78 L388 77 L393 76 L398 75 L402 74 L407 72 L411 70 L416 68 L420 66 L424 63 L427 60 L427 60 L423 62 L419 64 L415 66 L410 68 L406 69 L402 70 L397 70 L393 71 L388 71 L383 71 L379 71 L374 70 L370 70 L365 69Z M313 153 L319 148 L326 144 L333 140 L340 136 L347 132 L354 128 L362 124 L369 120 L376 116 L383 112 L390 109 L398 105 L405 102 L413 98 L420 95 L428 92 L435 89 L443 86 L450 83 L458 81 L466 78 L474 76 L482 74 L490 72 L498 70 L506 68 L514 66 L522 64 L522 64 L513 65 L505 66 L497 67 L489 68 L481 70 L473 71 L464 73 L456 75 L448 77 L440 79 L432 81 L424 83 L417 86 L409 88 L401 91 L393 94 L385 97 L378 100 L370 103 L362 107 L355 110 L347 113 L340 117 L332 120 L325 124 L317 128 L310 132 L303 135Z M401 100 L406 103 L412 105 L417 106 L423 108 L429 109 L435 110 L440 111 L446 112 L452 112 L458 111 L464 111 L469 110 L475 108 L480 107 L480 107 L475 108 L469 108 L464 109 L458 109 L452 108 L447 107 L441 106 L436 105 L431 104 L425 102 L420 100 L415 97 L410 95 L405 92Z M460 79 L462 75 L465 71 L468 67 L471 63 L474 60 L478 56 L482 53 L485 50 L490 47 L494 45 L494 45 L489 46 L485 49 L480 51 L476 54 L472 57 L468 61 L465 64 L461 68 L458 72 L455 76Z M309 157 L317 156 L326 154 L334 153 L343 151 L351 150 L360 149 L368 147 L377 146 L385 145 L394 144 L402 142 L411 141 L419 140 L428 139 L436 138 L445 138 L453 137 L462 136 L470 135 L479 134 L488 134 L496 133 L505 133 L513 132 L522 132 L530 132 L539 131 L548 131 L548 131 L539 130 L530 130 L522 129 L513 129 L505 129 L496 129 L487 129 L479 129 L470 129 L461 129 L453 129 L444 129 L436 129 L427 130 L418 130 L410 131 L401 131 L392 132 L384 132 L375 133 L366 133 L358 134 L349 135 L341 136 L332 137 L323 137 L315 138 L306 139Z M305 161 L313 162 L321 164 L329 166 L337 167 L345 169 L354 170 L362 172 L370 173 L378 175 L386 176 L394 177 L402 178 L410 179 L418 180 L426 181 L435 182 L443 183 L451 184 L459 185 L467 185 L475 186 L484 186 L492 186 L500 187 L508 187 L516 187 L524 187 L533 187 L533 187 L524 186 L516 185 L508 185 L500 184 L492 183 L484 182 L476 181 L468 179 L460 178 L452 177 L444 175 L436 174 L428 172 L420 171 L412 169 L404 168 L396 166 L388 164 L380 162 L372 160 L365 158 L357 156 L349 154 L341 152 L333 150 L325 148 L318 146 L310 143Z M465 184 L469 188 L473 191 L477 194 L481 197 L485 200 L490 202 L494 204 L499 206 L504 208 L509 209 L509 209 L504 207 L500 205 L495 202 L491 200 L487 197 L483 194 L480 191 L476 187 L473 184 L470 180Z M302 164 L308 168 L314 172 L320 176 L326 179 L332 183 L338 187 L344 190 L351 194 L357 197 L364 200 L370 203 L377 206 L383 209 L390 212 L396 215 L403 217 L410 220 L417 222 L424 224 L430 226 L437 228 L444 229 L451 231 L458 232 L465 233 L472 234 L479 235 L486 235 L486 235 L480 234 L473 232 L466 230 L459 228 L452 226 L446 224 L439 222 L432 220 L426 217 L420 214 L413 212 L407 209 L401 206 L394 202 L388 199 L382 196 L376 192 L370 189 L364 185 L358 181 L353 177 L347 173 L341 169 L336 165 L330 161 L324 157 L319 152 L313 148Z M387 208 L392 206 L396 205 L401 203 L405 201 L410 200 L414 199 L419 198 L424 198 L429 197 L434 197 L438 197 L443 198 L448 199 L453 200 L453 200 L448 198 L443 197 L439 195 L434 194 L429 194 L424 193 L419 193 L414 194 L409 194 L403 195 L399 196 L394 197 L389 198 L384 200Z M300 165 L303 169 L306 174 L309 179 L312 183 L316 188 L319 192 L323 196 L326 200 L330 205 L334 209 L338 213 L342 216 L346 220 L351 224 L355 227 L359 230 L364 234 L369 237 L373 239 L378 242 L383 244 L388 247 L393 249 L399 251 L404 252 L409 254 L414 255 L420 256 L420 256 L415 254 L410 252 L405 250 L400 248 L395 245 L390 243 L386 240 L381 237 L377 234 L373 231 L369 227 L365 224 L361 220 L357 217 L353 213 L350 209 L346 205 L343 201 L340 197 L337 192 L334 188 L331 184 L328 179 L325 175 L323 170 L320 165 L318 161 L315 156Z M350 221 L354 220 L357 220 L361 220 L365 220 L368 220 L372 220 L376 221 L379 221 L383 222 L386 223 L390 224 L393 226 L396 228 L400 230 L400 230 L397 227 L394 225 L391 222 L387 220 L384 219 L380 217 L377 216 L373 215 L369 214 L365 213 L361 213 L357 212 L353 212 L350 212Z M301 165 L301 169 L302 173 L303 176 L304 180 L305 184 L306 187 L307 191 L308 194 L309 198 L311 201 L312 205 L314 208 L316 212 L318 215 L320 218 L322 221 L325 224 L327 227 L330 229 L332 232 L335 234 L338 237 L341 239 L344 241 L347 243 L351 244 L354 246 L357 247 L357 247 L354 245 L351 243 L348 241 L346 239 L343 237 L340 234 L338 232 L336 229 L334 226 L332 223 L330 220 L328 217 L326 214 L325 211 L323 208 L322 205 L321 202 L320 198 L319 195 L318 192 L317 188 L317 185 L316 181 L316 178 L315 174 L315 171 L315 167 L315 164Z"/></g><g transform="translate(600 0) scale(-1 1)"><path d="M314 136 L315 133 L315 129 L316 125 L317 121 L318 117 L318 114 L319 110 L320 106 L322 103 L323 99 L324 96 L326 92 L327 89 L329 85 L331 82 L333 79 L335 76 L337 72 L340 69 L342 67 L345 64 L348 61 L350 58 L353 56 L356 54 L360 51 L363 49 L366 47 L366 47 L363 49 L359 50 L355 52 L352 54 L349 56 L345 58 L342 61 L339 63 L336 66 L333 69 L330 72 L328 75 L325 78 L323 81 L320 85 L318 88 L316 92 L314 96 L312 99 L311 103 L309 107 L308 111 L306 114 L305 118 L304 122 L303 126 L302 130 L301 134Z M316 145 L319 140 L323 134 L327 129 L330 123 L334 118 L338 113 L342 107 L346 102 L351 97 L355 92 L359 87 L364 83 L369 78 L373 73 L378 69 L383 65 L388 60 L394 56 L399 52 L405 49 L410 45 L416 42 L422 38 L428 35 L434 32 L440 30 L446 27 L452 25 L452 25 L446 26 L439 28 L433 30 L426 32 L420 35 L413 37 L407 40 L401 43 L395 46 L389 50 L383 53 L378 57 L372 61 L366 65 L361 69 L356 74 L350 78 L345 83 L340 88 L335 92 L330 97 L326 102 L321 107 L317 113 L312 118 L308 123 L304 129 L299 134Z M364 78 L369 78 L374 78 L379 78 L384 78 L388 77 L393 76 L398 75 L402 74 L407 72 L411 70 L416 68 L420 66 L424 63 L427 60 L427 60 L423 62 L419 64 L415 66 L410 68 L406 69 L402 70 L397 70 L393 71 L388 71 L383 71 L379 71 L374 70 L370 70 L365 69Z M313 153 L319 148 L326 144 L333 140 L340 136 L347 132 L354 128 L362 124 L369 120 L376 116 L383 112 L390 109 L398 105 L405 102 L413 98 L420 95 L428 92 L435 89 L443 86 L450 83 L458 81 L466 78 L474 76 L482 74 L490 72 L498 70 L506 68 L514 66 L522 64 L522 64 L513 65 L505 66 L497 67 L489 68 L481 70 L473 71 L464 73 L456 75 L448 77 L440 79 L432 81 L424 83 L417 86 L409 88 L401 91 L393 94 L385 97 L378 100 L370 103 L362 107 L355 110 L347 113 L340 117 L332 120 L325 124 L317 128 L310 132 L303 135Z M401 100 L406 103 L412 105 L417 106 L423 108 L429 109 L435 110 L440 111 L446 112 L452 112 L458 111 L464 111 L469 110 L475 108 L480 107 L480 107 L475 108 L469 108 L464 109 L458 109 L452 108 L447 107 L441 106 L436 105 L431 104 L425 102 L420 100 L415 97 L410 95 L405 92Z M460 79 L462 75 L465 71 L468 67 L471 63 L474 60 L478 56 L482 53 L485 50 L490 47 L494 45 L494 45 L489 46 L485 49 L480 51 L476 54 L472 57 L468 61 L465 64 L461 68 L458 72 L455 76Z M309 157 L317 156 L326 154 L334 153 L343 151 L351 150 L360 149 L368 147 L377 146 L385 145 L394 144 L402 142 L411 141 L419 140 L428 139 L436 138 L445 138 L453 137 L462 136 L470 135 L479 134 L488 134 L496 133 L505 133 L513 132 L522 132 L530 132 L539 131 L548 131 L548 131 L539 130 L530 130 L522 129 L513 129 L505 129 L496 129 L487 129 L479 129 L470 129 L461 129 L453 129 L444 129 L436 129 L427 130 L418 130 L410 131 L401 131 L392 132 L384 132 L375 133 L366 133 L358 134 L349 135 L341 136 L332 137 L323 137 L315 138 L306 139Z M305 161 L313 162 L321 164 L329 166 L337 167 L345 169 L354 170 L362 172 L370 173 L378 175 L386 176 L394 177 L402 178 L410 179 L418 180 L426 181 L435 182 L443 183 L451 184 L459 185 L467 185 L475 186 L484 186 L492 186 L500 187 L508 187 L516 187 L524 187 L533 187 L533 187 L524 186 L516 185 L508 185 L500 184 L492 183 L484 182 L476 181 L468 179 L460 178 L452 177 L444 175 L436 174 L428 172 L420 171 L412 169 L404 168 L396 166 L388 164 L380 162 L372 160 L365 158 L357 156 L349 154 L341 152 L333 150 L325 148 L318 146 L310 143Z M465 184 L469 188 L473 191 L477 194 L481 197 L485 200 L490 202 L494 204 L499 206 L504 208 L509 209 L509 209 L504 207 L500 205 L495 202 L491 200 L487 197 L483 194 L480 191 L476 187 L473 184 L470 180Z M302 164 L308 168 L314 172 L320 176 L326 179 L332 183 L338 187 L344 190 L351 194 L357 197 L364 200 L370 203 L377 206 L383 209 L390 212 L396 215 L403 217 L410 220 L417 222 L424 224 L430 226 L437 228 L444 229 L451 231 L458 232 L465 233 L472 234 L479 235 L486 235 L486 235 L480 234 L473 232 L466 230 L459 228 L452 226 L446 224 L439 222 L432 220 L426 217 L420 214 L413 212 L407 209 L401 206 L394 202 L388 199 L382 196 L376 192 L370 189 L364 185 L358 181 L353 177 L347 173 L341 169 L336 165 L330 161 L324 157 L319 152 L313 148Z M387 208 L392 206 L396 205 L401 203 L405 201 L410 200 L414 199 L419 198 L424 198 L429 197 L434 197 L438 197 L443 198 L448 199 L453 200 L453 200 L448 198 L443 197 L439 195 L434 194 L429 194 L424 193 L419 193 L414 194 L409 194 L403 195 L399 196 L394 197 L389 198 L384 200Z M300 165 L303 169 L306 174 L309 179 L312 183 L316 188 L319 192 L323 196 L326 200 L330 205 L334 209 L338 213 L342 216 L346 220 L351 224 L355 227 L359 230 L364 234 L369 237 L373 239 L378 242 L383 244 L388 247 L393 249 L399 251 L404 252 L409 254 L414 255 L420 256 L420 256 L415 254 L410 252 L405 250 L400 248 L395 245 L390 243 L386 240 L381 237 L377 234 L373 231 L369 227 L365 224 L361 220 L357 217 L353 213 L350 209 L346 205 L343 201 L340 197 L337 192 L334 188 L331 184 L328 179 L325 175 L323 170 L320 165 L318 161 L315 156Z M350 221 L354 220 L357 220 L361 220 L365 220 L368 220 L372 220 L376 221 L379 221 L383 222 L386 223 L390 224 L393 226 L396 228 L400 230 L400 230 L397 227 L394 225 L391 222 L387 220 L384 219 L380 217 L377 216 L373 215 L369 214 L365 213 L361 213 L357 212 L353 212 L350 212Z M301 165 L301 169 L302 173 L303 176 L304 180 L305 184 L306 187 L307 191 L308 194 L309 198 L311 201 L312 205 L314 208 L316 212 L318 215 L320 218 L322 221 L325 224 L327 227 L330 229 L332 232 L335 234 L338 237 L341 239 L344 241 L347 243 L351 244 L354 246 L357 247 L357 247 L354 245 L351 243 L348 241 L346 239 L343 237 L340 234 L338 232 L336 229 L334 226 L332 223 L330 220 L328 217 L326 214 L325 211 L323 208 L322 205 L321 202 L320 198 L319 195 L318 192 L317 188 L317 185 L316 181 L316 178 L315 174 L315 171 L315 167 L315 164Z"/></g><g stroke="none"><path d="M300 126 L313 150 L300 174 L287 150Z"/><path d="M313 140 L312 137 L311 135 L311 132 L310 130 L310 127 L309 125 L309 122 L308 120 L308 117 L307 115 L307 112 L306 110 L306 107 L305 105 L305 102 L304 100 L304 97 L303 95 L303 92 L302 90 L302 87 L302 85 L301 82 L301 80 L300 77 L300 75 L300 72 L300 70 L300 70 L299 72 L299 75 L299 77 L298 80 L298 82 L298 85 L297 87 L297 90 L296 92 L296 95 L295 97 L295 100 L294 102 L294 105 L293 107 L293 110 L292 112 L292 115 L291 117 L291 120 L290 122 L290 125 L289 127 L289 130 L288 132 L288 135 L287 137 L287 140Z"/><path d="M287 160 L287 162 L288 163 L288 165 L289 167 L289 169 L290 171 L290 173 L291 175 L291 177 L292 179 L292 181 L293 183 L293 185 L294 187 L294 189 L295 191 L295 193 L296 195 L296 197 L297 199 L297 201 L298 203 L298 205 L298 207 L299 209 L299 211 L299 213 L300 215 L300 215 L300 213 L300 211 L300 209 L301 207 L301 205 L302 203 L302 201 L302 199 L303 197 L303 195 L304 193 L304 191 L305 189 L305 187 L306 185 L306 183 L307 181 L307 179 L308 177 L308 175 L309 173 L309 171 L310 169 L310 167 L311 165 L311 163 L312 162 L313 160Z"/></g></symbol>
+    <symbol id="s-spark" viewBox="0 0 200 200"><path d="M192.9 80.2 Q111.7 107.6 119.8 192.9 Q92.4 111.7 7.1 119.8 Q88.3 92.4 80.2 7.1 Q107.6 88.3 192.9 80.2Z"/></symbol>
+    <symbol id="s-star" viewBox="0 0 200 200"><path d="M100.0 4.0 123.5 67.6 191.3 70.3 138.0 112.4 156.4 177.7 100.0 140.0 43.6 177.7 62.0 112.4 8.7 70.3 76.5 67.6Z"/></symbol>
+    <symbol id="s-foil" viewBox="0 0 200 200"><path fill="#ff6ec2" d="M100 106L116.7 11.5L130.9 76.1Z"/><path fill="#ff6ec2" d="M100 106L130.9 76.1L195.1 92.6Z"/><path fill="#ff6ec2" d="M100 106L195.1 92.6L138.0 126.2Z"/><path fill="#ff6ec2" d="M100 106L138.0 126.2L142.1 192.3Z"/><path fill="#ff0a8a" d="M100 106L142.1 192.3L92.5 148.3Z"/><path fill="#8c0f4f" d="M100 106L92.5 148.3L30.9 172.7Z"/><path fill="#8c0f4f" d="M100 106L30.9 172.7L57.4 112.0Z"/><path fill="#ff0a8a" d="M100 106L57.4 112.0L15.2 60.9Z"/><path fill="#ff6ec2" d="M100 106L15.2 60.9L81.2 67.4Z"/><path fill="#ff6ec2" d="M100 106L81.2 67.4L116.7 11.5Z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 16 16"><path d="M4 2.5v11l9.5-5.5z"/></symbol><symbol id="i-pausa" viewBox="0 0 16 16"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z"/></symbol><symbol id="i-anterior" viewBox="0 0 16 16"><path d="M3 2.5h2v11H3zM13 2.5v11L5.5 8z"/></symbol><symbol id="i-siguiente" viewBox="0 0 16 16"><path d="M11 2.5h2v11h-2zM3 2.5v11L10.5 8z"/></symbol><symbol id="i-cerrar" viewBox="0 0 16 16"><path d="M3.4 2 8 6.6 12.6 2 14 3.4 9.4 8l4.6 4.6-1.4 1.4L8 9.4 3.4 14 2 12.6 6.6 8 2 3.4z"/></symbol><symbol id="i-minimizar" viewBox="0 0 16 16"><path d="M3 11.5h10V14H3z"/></symbol><symbol id="i-maximizar" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 2.5h11v11h-11zM4.5 6h7v5.5h-7z"/></symbol><symbol id="i-carrito" viewBox="0 0 16 16"><path d="M1 2h2.6l.6 2H15l-1.8 6.2H5.6L3.2 3.6H1z"/><circle cx="6.2" cy="13" r="1.4"/><circle cx="12" cy="13" r="1.4"/></symbol><symbol id="i-mensaje" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.5 3h13v8.5H6L3 14v-2.5H1.5zM3.5 5v.01h9V5zM3.5 7.2v1.6h6.5V7.2z"/></symbol><symbol id="i-descarga" viewBox="0 0 16 16"><path d="M7 1.5h2v7h2.6L8 12 4.4 8.5H7zM2 12.5h2v1.5h8v-1.5h2V16H2z"/></symbol><symbol id="i-volumen" viewBox="0 0 16 16"><path d="M1.5 5.5H4L8 2v12l-4-3.5H1.5z"/><path d="M10 5.2a3.5 3.5 0 0 1 0 5.6M11.8 3a6.4 6.4 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol><symbol id="i-compartir" viewBox="0 0 16 16"><circle cx="12.5" cy="3" r="2.3"/><circle cx="3.5" cy="8" r="2.3"/><circle cx="12.5" cy="13" r="2.3"/><path d="M11.4 2.4l1 1.8-7.7 4.3-1-1.8zM4.7 7.5l7.7 4.3-1 1.8-7.7-4.3z"/></symbol><symbol id="i-destello" viewBox="0 0 16 16"><path d="M15.5 8.0 Q9.0 9.0 8.0 15.5 Q7.0 9.0 0.5 8.0 Q7.0 7.0 8.0 0.5 Q9.0 7.0 15.5 8.0Z"/></symbol>
+  </defs>
+</svg>
+
+<main class="adm">
+  <div class="adm-head">
+    <div><span class="label eyebrow">Solo para 7TY</span><h1 class="neon">Panel</h1></div>
+    <p>Cambia beats, proyectos, bio, tienda, estudio y datos legales. Nada se ve en la web hasta que pulses <b>Publicar</b>: entonces se guarda en GitHub y la web se actualiza en uno o dos minutos.</p>
+  </div>
+
+  <section class="win active login" id="login" aria-labelledby="lg-t">
+    <div class="win-bar"><span class="win-title" id="lg-t"><svg><use href="#s-spark"/></svg>conectar.exe</span></div>
+    <div class="win-body">
+      <form class="pn-form" id="lg-form" novalidate>
+        <div class="pn-row2">
+          <label class="fld" for="lg-owner">Usuario u organización de GitHub<input id="lg-owner" autocomplete="username" placeholder="7tymusic"></label>
+          <label class="fld" for="lg-repo">Repositorio<input id="lg-repo" placeholder="7tymusic-web"></label>
+        </div>
+        <label class="fld" for="lg-branch">Rama<input id="lg-branch" placeholder="main"></label>
+        <label class="fld" for="lg-token">Token de GitHub (fine-grained, solo este repo, Contents: Read and write)<input id="lg-token" type="password" autocomplete="current-password" placeholder="github_pat_…"></label>
+        <label class="switch" for="lg-remember"><input type="checkbox" id="lg-remember"> <span>Recordar en este dispositivo</span></label>
+        <button class="btn btn-hot" type="submit" id="lg-go"><svg class="i"><use href="#s-spark"/></svg>Conectar</button>
+        <div class="pn-msg" id="lg-msg" role="status" aria-live="polite"></div>
+        <p class="pn-help">El token se queda solo en este navegador. Cómo crearlo: README del repositorio, apartado «Panel».</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="win active" id="app" hidden aria-labelledby="app-t">
+    <div class="win-bar"><span class="win-title" id="app-t"><svg><use href="#s-spark"/></svg>panel_7ty.exe</span><button class="mini" type="button" id="logout" style="margin-left:auto">Salir</button></div>
+    <div class="pn-tabs" role="tablist">
+      <button class="pn-tab" type="button" role="tab" id="tab-in" aria-selected="true" aria-controls="pn-home">Inicio</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-b" aria-selected="false" aria-controls="pn-beats">Beats</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-p" aria-selected="false" aria-controls="pn-projects">Proyectos</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-bio" aria-selected="false" aria-controls="pn-bio">Bio</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-s" aria-selected="false" aria-controls="pn-store">Tienda</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-st" aria-selected="false" aria-controls="pn-studio">Estudio</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-lg" aria-selected="false" aria-controls="pn-legal">Legal</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-dr" aria-selected="false" aria-controls="pn-drops">Drops y radio</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-mu" aria-selected="false" aria-controls="pn-wall">Muro</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-se" aria-selected="false" aria-controls="pn-secret">Secretos</button>
+      <button class="pn-tab" type="button" role="tab" id="tab-sx" aria-selected="false" aria-controls="pn-stats">Estadísticas</button>
+    </div>
+
+    <div class="win-body" id="pn-home" role="tabpanel" aria-labelledby="tab-in">
+      <div class="ck-head"><h3>Lista de lanzamiento</h3><span id="ck-score"></span></div>
+      <div class="ck-bar" aria-hidden="true"><i id="ck-fill"></i></div>
+      <div id="ck-list"></div>
+      <p class="ck-group">Fuera de la web</p>
+      <ul class="ck-off">
+        <li>Decide si los precios van en euros o en dólares (BeatStars cobra en dólares y la web enseña «40€»): cámbialo en la pestaña Tienda.</li>
+        <li>Consulta con una asesoría el alta de autónomo y si tus precios llevan IVA: la web dice «Precios con IVA incluido» en el pie y en Licencias.</li>
+        <li>El día que la subas, pruébala en tu iPhone y en algún Android: la cabina, la radio, la agenda y la compra en BeatStars.</li>
+      </ul>
+    </div>
+    <div class="win-body" id="pn-beats" role="tabpanel" aria-labelledby="tab-b" hidden>
+      <div class="pn-drop" id="dz"><input type="file" id="dz-file" multiple accept=".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a" aria-label="Elegir varios beats"><b>Arrastra aquí tus beats</b><span>Uno o varios MP3 o M4A a la vez, o pulsa para elegirlos. Se rellenan solos el nombre, el nº, el BPM y el tono.</span></div>
+      <div class="pn-queue" id="pn-queue" hidden>
+        <div class="pn-queue-h"><h3>Para subir <span class="lcdtxt" id="q-count" style="color:var(--hot-text)"></span></h3><div class="acts"><button class="mini" type="button" id="q-clear">Vaciar</button><button class="btn btn-hot btn-sm" type="button" id="q-go"><svg class="i"><use href="#i-descarga"/></svg><span id="q-go-l">Añadir todos</span></button></div></div>
+        <div class="pn-msg" id="q-msg" role="status" aria-live="polite"></div>
+        <div id="q-items" style="display:grid;gap:8px"></div>
+        <p class="pn-help">El BPM y el tono salen de analizar el audio y aciertan casi siempre, pero revísalos: a veces el BPM sale al doble o a la mitad (pulsa la sugerencia para cambiarlo) y el tono puede confundirse con uno cercano. Si el nombre del archivo ya trae el BPM o el tono («333 Sugarbaby 94bpm F#m.mp3»), se usa ese.</p>
+      </div>
+      <div class="pn-grid">
+        <form class="pn-form" id="pn-form" novalidate>
+          <h3 id="f-head">Subir beat</h3>
+          <div class="pn-edit-bar" id="f-editbar" hidden><span id="f-editing">EDITANDO</span><button class="mini" type="button" id="f-cancel">Cancelar</button></div>
+          <label class="fld" for="f-title">Nombre del beat *<input id="f-title" maxlength="60" placeholder="Sugarbaby"></label>
+          <div class="pn-row2">
+            <label class="fld" for="f-code">Nº de catálogo<input id="f-code" inputmode="numeric" maxlength="6" placeholder="333"></label>
+            <label class="fld" for="f-bpm">BPM<input id="f-bpm" inputmode="numeric" maxlength="3" placeholder="94"></label>
+          </div>
+          <div class="pn-row2">
+            <label class="fld" for="f-key">Tonalidad<input id="f-key" maxlength="8" placeholder="F#m"></label>
+            <label class="fld" for="f-tags">Estilos (separados por comas)<input id="f-tags" maxlength="80" placeholder="Reggaetón, Dancehall"></label>
+          </div>
+          <p class="det" id="f-det" hidden></p>
+          <label class="fld" for="f-at">Salida programada (opcional: no se ve hasta esa hora)<input id="f-at" type="datetime-local"></label>
+          <label class="fld" for="f-bs">Enlace del beat en BeatStars<input id="f-bs" type="url" inputmode="url" maxlength="300" placeholder="https://www.beatstars.com/beat/…"></label>
+          <label class="fld" for="f-file"><span id="f-file-l">Preview de audio * (MP3 o M4A)</span><input id="f-file" type="file" accept=".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a"></label>
+          <button class="btn btn-hot" type="submit" id="f-go"><svg class="i"><use href="#i-descarga"/></svg>Añadir al catálogo</button>
+          <div class="pn-msg" id="f-msg" role="status" aria-live="polite"></div>
+          <p class="pn-help">Sube una preview corta con tag de voz (máx. 25 MB). En la web salen 10 beats al azar en cada visita.</p>
+        </form>
+        <div class="pn-list">
+          <h3>Catálogo <span id="pn-count" class="lcdtxt" style="color:var(--hot-text)"></span></h3>
+          <div class="pn-items" id="pn-items"></div>
+          <p class="pn-help">«Vendido» lo tacha y bloquea la compra. «Ocultar» lo quita de la web sin borrarlo. Con enlace de BeatStars, su botón «Comprar» lleva directo a ese beat.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="win-body" id="pn-projects" role="tabpanel" aria-labelledby="tab-p" hidden>
+      <div class="pn-grid">
+        <form class="pn-form" id="pj-form" novalidate>
+          <h3 id="pj-head">Añadir proyecto</h3>
+          <label class="fld" for="pj-t">Título del tema *<input id="pj-t" maxlength="60" placeholder="Nombre del tema"></label>
+          <div class="pn-row2">
+            <label class="fld" for="pj-a">Artista *<input id="pj-a" maxlength="60" placeholder="Mvrk"></label>
+            <label class="fld" for="pj-n">Streams<input id="pj-n" maxlength="12" placeholder="2,3M+"></label>
+          </div>
+          <label class="fld" for="pj-sp">Enlace del tema en Spotify<input id="pj-sp" type="url" inputmode="url" maxlength="300" placeholder="https://open.spotify.com/track/…"></label>
+          <div class="fld" role="group" aria-labelledby="pj-roles-l"><span id="pj-roles-l">Qué hizo 7TY</span><div class="pn-checks" id="pj-roles">
+            <label><input type="checkbox" value="Producción" checked>Producción</label><label><input type="checkbox" value="Coproducción">Coproducción</label><label><input type="checkbox" value="Mezcla">Mezcla</label><label><input type="checkbox" value="Master">Master</label><label><input type="checkbox" value="Grabación">Grabación</label><label><input type="checkbox" value="Composición">Composición</label>
+          </div></div>
+          <div class="pn-row2">
+            <label class="fld" for="pj-y">Año<input id="pj-y" inputmode="numeric" maxlength="4" placeholder="2025"></label>
+            <label class="fld" for="pj-cv"><span id="pj-cv-l">Portada (JPG, PNG o WEBP)</span><input id="pj-cv" type="file" accept="image/jpeg,image/png,image/webp"></label>
+          </div>
+          <label class="fld" for="pj-file"><span id="pj-file-l">Audio (opcional, MP3 o M4A)</span><input id="pj-file" type="file" accept=".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a"></label>
+          <button class="btn btn-hot" type="submit" id="pj-go"><svg class="i"><use href="#s-spark"/></svg>Añadir a destacados</button>
+          <button class="mini" type="button" id="pj-cancel" hidden>Cancelar edición</button>
+          <div class="pn-msg" id="pj-msg" role="status" aria-live="polite"></div>
+          <p class="pn-help">Los nuevos salen los primeros; reordénalos con ▲ ▼. Escribe los streams como quieras que se vean (10M+, 1,5M+, 700K+): el más alto sale en la portada. Sin enlace de Spotify, lleva a la playlist «Prod by 7ty». La portada se recorta en cuadrado; sin portada sale la inicial del tema.</p>
+        </form>
+        <div class="pn-list">
+          <h3>Destacados</h3>
+          <div class="pn-items" id="pn-proj"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="win-body" id="pn-bio" role="tabpanel" aria-labelledby="tab-bio" hidden>
+      <form class="pn-form" id="bio-form" novalidate>
+        <h3>Bio y cifras</h3>
+        <label class="fld" for="bio-in">Texto de la bio<textarea id="bio-in" rows="10" maxlength="2400"></textarea></label>
+        <p class="pn-help">Deja una línea en blanco entre párrafos. Pon entre **dos asteriscos** lo que quieras resaltar en rosa.</p>
+        <div class="pn-row3">
+          <label class="fld" for="bio-streams">Streams totales<input id="bio-streams" maxlength="10" placeholder="13M"></label>
+          <label class="fld" for="bio-listeners">Oyentes mensuales<input id="bio-listeners" maxlength="10" placeholder="20.000"></label>
+          <label class="fld" for="bio-listeners-s">Oyentes (portada, corto)<input id="bio-listeners-s" maxlength="8" placeholder="20K"></label>
+        </div>
+        <button class="btn btn-hot" type="submit"><svg class="i"><use href="#s-spark"/></svg>Aplicar cambios</button>
+        <div class="pn-msg" id="bio-msg" role="status" aria-live="polite"></div>
+      </form>
+      <div class="pn-form pn-sub">
+        <h3>Presskit</h3>
+        <p class="pn-help" id="pk-st">Presskit actual: —</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><label class="btn btn-chrome btn-sm filebtn">Subir nuevo PDF<input type="file" id="pk-file" accept="application/pdf,.pdf" aria-label="Nuevo presskit en PDF"></label><a class="btn btn-chrome btn-sm" id="pk-view" href="#" target="_blank" rel="noopener">Ver el actual</a></div>
+        <div class="pn-msg" id="pk-msg" role="status" aria-live="polite"></div>
+        <p class="pn-help">Sale en la bio y en contacto. Máximo 25 MB: exporta desde Canva como «PDF estándar», no «para impresión».</p>
+      </div>
+    </div>
+
+    <div class="win-body" id="pn-store" role="tabpanel" aria-labelledby="tab-s" hidden>
+      <form class="pn-form" id="st-form" novalidate>
+        <h3>Tienda BeatStars</h3>
+        <div class="pn-row3">
+          <label class="fld" for="st-profile">Perfil completo<input id="st-profile" type="url" inputmode="url" maxlength="300" placeholder="https://www.beatstars.com/prod7ty"></label>
+          <label class="fld" for="st-count">Nº de beats allí<input id="st-count" inputmode="numeric" maxlength="5" placeholder="228"></label>
+          <label class="fld" for="st-price">Precio desde<input id="st-price" maxlength="10" placeholder="40€"></label>
+        </div>
+        <button class="btn btn-hot" type="submit"><svg class="i"><use href="#s-spark"/></svg>Aplicar cambios</button>
+        <div class="pn-msg" id="st-msg" role="status" aria-live="polite"></div>
+        <p class="pn-help">El perfil y el número salen en el bloque «Ver los N beats en BeatStars». El precio sale en cada fila del catálogo.</p>
+      </form>
+    </div>
+    <div class="win-body" id="pn-studio" role="tabpanel" aria-labelledby="tab-st" hidden>
+      <form class="pn-form" id="bk-form" novalidate style="margin-bottom:20px;padding-bottom:18px;border-bottom:1.5px dashed var(--line)">
+        <h3>Reservas con Google Calendar</h3>
+        <p class="pn-help">Cómo conectarlo, una sola vez y desde el ordenador: 1) En Google Calendar pulsa «Crear» y elige «Agenda de citas». 2) Ponle nombre («Sesión de estudio»), la duración, los días y horas en que abres y, si quieres, un descanso entre sesiones y un máximo por día. Guarda. 3) Abre la agenda, pulsa «Compartir» y, en «Insertar en el sitio web», copia el código. 4) Pégalo aquí.</p>
+        <label class="fld" for="bk-url">Código o enlace de tu agenda de citas<textarea id="bk-url" rows="3" maxlength="2000" placeholder="&lt;iframe src=&quot;https://calendar.google.com/calendar/appointments/schedules/…&quot;&gt;&lt;/iframe&gt;"></textarea></label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn btn-hot btn-sm" type="submit"><svg class="i"><use href="#i-calendario"/></svg>Aplicar agenda</button><button class="mini danger" type="button" id="bk-off">Quitar la agenda</button></div>
+        <div class="pn-msg" id="bk-msg" role="status" aria-live="polite"></div>
+        <p class="pn-help">Con una cuenta de Google gratis tienes una agenda de citas: las reservas se apuntan solas en tu calendario y te avisan por email (los recordatorios automáticos al artista son de Google One de pago). Con el código de «Insertar», la agenda se ve dentro de la web; con el enlace corto (calendar.app.google) se abre en otra pestaña. Los huecos ya los enseña la agenda: el estado de arriba úsalo para «Grabando ahora» o vacaciones.</p>
+      </form>
+      <form class="pn-form" id="ls-form" novalidate style="margin-bottom:20px;padding-bottom:18px;border-bottom:1.5px dashed var(--line)">
+        <h3>Estado del estudio</h3>
+        <div class="pn-row3" style="grid-template-columns:1.2fr .6fr .9fr">
+          <label class="fld" for="ls-state">Ahora mismo<select id="ls-state"><option value="">No mostrar nada</option><option value="libre">Huecos libres</option><option value="pocas">Quedan pocas horas</option><option value="lleno">Agenda llena</option><option value="grabando">Grabando ahora</option><option value="vacaciones">De vacaciones</option></select></label>
+          <label class="fld" for="ls-slots">Huecos esta semana<input id="ls-slots" inputmode="numeric" maxlength="2" placeholder="3"></label>
+          <label class="fld" for="ls-until">Hasta el (si está lleno o fuera)<input id="ls-until" type="date"></label>
+        </div>
+        <label class="fld" for="ls-note">Nota corta (opcional)<input id="ls-note" maxlength="50" placeholder="Tardes libres el jueves"></label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn btn-hot btn-sm" type="submit"><svg class="i"><use href="#s-spark"/></svg>Aplicar estado</button><span id="ls-prev"></span></div>
+        <div class="pn-msg" id="ls-msg" role="status" aria-live="polite"></div>
+        <p class="pn-help">Sale en Estudio y en Contacto con la fecha de la última actualización. Si no lo tocas en 14 días se oculta solo (en 12 horas si pones «Grabando ahora»), para que nunca enseñe algo viejo.</p>
+      </form>
+      <div class="pn-grid">
+        <div class="pn-form">
+          <h3>Fotos del estudio</h3>
+          <label class="fld" for="ph-file">Fotos (puedes elegir varias)<input id="ph-file" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
+          <label class="fld" for="ph-alt">Descripción corta (opcional)<input id="ph-alt" maxlength="90" placeholder="La cabina de voz"></label>
+          <button class="btn btn-hot" type="button" id="ph-go"><svg class="i"><use href="#i-descarga"/></svg>Añadir fotos</button>
+          <div class="pn-msg" id="ph-msg" role="status" aria-live="polite"></div>
+          <p class="pn-help">Se reducen solas a un tamaño ligero. Con al menos una foto aparece la galería en la sección Estudio.</p>
+          <div class="pn-photos" id="pn-photos"></div>
+        </div>
+        <form class="pn-form" id="rv-form" novalidate>
+          <h3 id="rv-head">Añadir reseña</h3>
+          <label class="fld" for="rv-text">Lo que dice *<textarea id="rv-text" rows="4" maxlength="320" placeholder="Copia aquí lo que te escribió el artista"></textarea></label>
+          <div class="pn-row2">
+            <label class="fld" for="rv-who">Artista *<input id="rv-who" maxlength="40" placeholder="Nombre artístico"></label>
+            <label class="fld" for="rv-what">Qué hizo contigo<input id="rv-what" maxlength="50" placeholder="Mezcla y master de «Tema»"></label>
+          </div>
+          <button class="btn btn-hot" type="submit" id="rv-go"><svg class="i"><use href="#s-spark"/></svg>Añadir reseña</button>
+          <button class="mini" type="button" id="rv-cancel" hidden>Cancelar edición</button>
+          <div class="pn-msg" id="rv-msg" role="status" aria-live="polite"></div>
+          <p class="pn-help">Solo reseñas reales, con permiso del artista. Con al menos una aparece el bloque «Lo que dicen los artistas».</p>
+          <div class="pn-items" id="pn-revs"></div>
+        </form>
+      </div>
+      <div class="pn-form pn-sub">
+        <h3>Antes y después</h3>
+        <p class="pn-help">Sube el mismo trozo de un tema dos veces: la toma en bruto (sin mezclar) y la versión con tu mezcla y master. Mejor de 30 a 60 segundos y cortados en el mismo instante, para que al cambiar suenen a la vez. Con al menos uno aparece el comparador en la sección Estudio.</p>
+        <div class="pn-row2">
+          <label class="fld" for="ab-tt">Tema *<input id="ab-tt" maxlength="50" placeholder="Nombre del tema"></label>
+          <label class="fld" for="ab-aa">Artista<input id="ab-aa" maxlength="40" placeholder="Nombre artístico"></label>
+        </div>
+        <div class="pn-row2">
+          <label class="fld" for="ab-fb">Antes: toma en bruto *<input id="ab-fb" type="file" accept=".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a"></label>
+          <label class="fld" for="ab-fa">Después: mezcla y master *<input id="ab-fa" type="file" accept=".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a"></label>
+        </div>
+        <button class="btn btn-hot" type="button" id="ab-go" style="justify-self:start"><svg class="i"><use href="#i-descarga"/></svg>Añadir comparación</button>
+        <div class="pn-msg" id="ab-msg" role="status" aria-live="polite"></div>
+        <div class="pn-items" id="ab-list"></div>
+      </div>
+    </div>
+    <div class="win-body" id="pn-drops" role="tabpanel" aria-labelledby="tab-dr" hidden>
+      <div class="pn-grid">
+        <div class="pn-form">
+          <h3>Programar un drop</h3>
+          <label class="fld" for="dr-beat">Beat<select id="dr-beat"></select></label>
+          <label class="fld" for="dr-at">Sale el<input id="dr-at" type="datetime-local"></label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button class="btn btn-hot btn-sm" type="button" id="dr-go"><svg class="i"><use href="#s-spark"/></svg>Programar</button><button class="mini" type="button" id="dr-fri">Próximo viernes 18:00</button></div>
+          <div class="pn-msg" id="dr-msg" role="status" aria-live="polite"></div>
+          <p class="pn-help">Hasta esa hora el beat no sale en el catálogo ni en la radio: en su lugar aparece una cuenta atrás en la sección Beats y en la barra de arriba. A la hora exacta sale solo, con la etiqueta «Nuevo» y el primero de la lista. Para subir un beat nuevo ya programado, ponle la fecha en «Salida programada» al subirlo. La hora es la de tu dispositivo; cada visitante la ve en la suya.</p>
+          <h3 style="margin-top:6px">Programados y recientes</h3>
+          <div class="pn-items" id="dr-list"></div>
+        </div>
+        <form class="pn-form" id="dr-form" novalidate>
+          <h3>Cómo se ve el drop</h3>
+          <label class="switch" for="dr-hide"><input type="checkbox" id="dr-hide"> <span>Nombre secreto hasta que salga («???»)</span></label>
+          <label class="switch" for="dr-teaser"><input type="checkbox" id="dr-teaser" checked> <span>Adelanto de 12 s que suena «a través de la pared»</span></label>
+          <div class="pn-row2">
+            <label class="fld" for="dr-ch">Enlace para avisos (canal de WhatsApp, Telegram, Instagram…)<input id="dr-ch" type="url" inputmode="url" maxlength="300" placeholder="https://whatsapp.com/channel/…"></label>
+            <label class="fld" for="dr-chl">Texto del botón<input id="dr-chl" maxlength="30" placeholder="Avísame por WhatsApp"></label>
+          </div>
+          <label class="fld" for="dr-days">Días con la etiqueta «Nuevo»<input id="dr-days" inputmode="numeric" maxlength="2" placeholder="7"></label>
+          <h3 style="margin-top:6px">Radio 7TY</h3>
+          <p class="pn-help">La radio pone en aleatorio, sin parar, todos los beats visibles y los proyectos con audio. Entre canción y canción suena una sintonía; si subes cuñas de voz cortas («estás escuchando Radio 7TY…»), suenan cada pocas canciones.</p>
+          <label class="fld" for="rd-every">Una cuña de voz cada<select id="rd-every"><option value="2">2 canciones</option><option value="3">3 canciones</option><option value="4">4 canciones</option><option value="5">5 canciones</option></select></label>
+          <button class="btn btn-hot" type="submit" id="dr-save"><svg class="i"><use href="#s-spark"/></svg>Aplicar ajustes</button>
+          <div class="pn-msg" id="dr-smsg" role="status" aria-live="polite"></div>
+          <label class="fld" for="rd-file">Cuñas de voz (MP3 o M4A de pocos segundos; puedes elegir varias)<input id="rd-file" type="file" multiple accept=".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a"></label>
+          <div class="pn-msg" id="rd-msg" role="status" aria-live="polite"></div>
+          <div class="pn-items" id="rd-list"></div>
+        </form>
+      </div>
+    </div>
+    <div class="win-body" id="pn-wall" role="tabpanel" aria-labelledby="tab-mu" hidden>
+      <div class="pn-grid">
+        <form class="pn-form" id="wl-form" novalidate>
+          <h3 id="wl-head">Añadir al muro</h3>
+          <div class="pn-row2">
+            <label class="fld" for="wl-t">Tema *<input id="wl-t" maxlength="60" placeholder="Nombre del tema"></label>
+            <label class="fld" for="wl-a">Artista *<input id="wl-a" maxlength="40" placeholder="Nombre artístico"></label>
+          </div>
+          <div class="pn-row2">
+            <label class="fld" for="wl-beat">Beat que usó<select id="wl-beat"></select></label>
+            <label class="fld" for="wl-d">Cuándo salió<input id="wl-d" maxlength="20" placeholder="Oct 2026"></label>
+          </div>
+          <label class="fld" for="wl-l">Enlace al tema (Spotify, YouTube, SoundCloud…)<input id="wl-l" type="url" inputmode="url" maxlength="300" placeholder="https://open.spotify.com/track/…"></label>
+          <label class="fld" for="wl-cv"><span id="wl-cv-l">Portada (opcional)</span><input id="wl-cv" type="file" accept="image/jpeg,image/png,image/webp"></label>
+          <button class="btn btn-hot" type="submit" id="wl-go"><svg class="i"><use href="#s-spark"/></svg>Añadir al muro</button>
+          <button class="mini" type="button" id="wl-cancel" hidden>Cancelar edición</button>
+          <div class="pn-msg" id="wl-msg" role="status" aria-live="polite"></div>
+          <p class="pn-help">Cuando un artista te manda su tema desde la web te llega por WhatsApp con todos los datos: cópialos aquí. Pídele permiso antes de ponerlo. Sin portada sale la inicial del tema.</p>
+        </form>
+        <div class="pn-list"><h3>En el muro</h3><div class="pn-items" id="wl-list"></div></div>
+      </div>
+    </div>
+    <div class="win-body" id="pn-secret" role="tabpanel" aria-labelledby="tab-se" hidden>
+      <div class="pn-grid">
+        <form class="pn-form" id="se-form" novalidate>
+          <h3>Destellos escondidos</h3>
+          <p class="pn-help">Hay 7 destellos escondidos por la web. Quien los encuentra todos ve el premio que pongas aquí. Ideas: un código de descuento creado en tu tienda de BeatStars, un loop gratis (enlace de Drive o WeTransfer) o «mándame captura y te regalo un beat».</p>
+          <label class="switch" for="se-spk"><input type="checkbox" id="se-spk" checked> <span>Destellos activados</span></label>
+          <label class="fld" for="se-rw">Mensaje del premio<textarea id="se-rw" rows="3" maxlength="300" placeholder="Has encontrado los 7 destellos. Usa este código en mi tienda de BeatStars:"></textarea></label>
+          <div class="pn-row2">
+            <label class="fld" for="se-code">Código<input id="se-code" maxlength="30" placeholder="SIETE7TY"></label>
+            <label class="fld" for="se-link">Enlace al regalo (opcional)<input id="se-link" type="url" inputmode="url" maxlength="300" placeholder="https://drive.google.com/…"></label>
+          </div>
+          <h3 style="margin-top:6px">Modo noche y salvapantallas</h3>
+          <label class="switch" for="se-night"><input type="checkbox" id="se-night" checked> <span>De 22:00 a 6:00: cielo estrellado, «Sesión nocturna» y beat de la noche</span></label>
+          <label class="switch" for="se-saver"><input type="checkbox" id="se-saver" checked> <span>Salvapantallas de estrellas tras 90 s sin tocar nada (solo ordenador)</span></label>
+          <button class="btn btn-hot" type="submit" id="se-go"><svg class="i"><use href="#s-spark"/></svg>Aplicar ajustes</button>
+          <div class="pn-msg" id="se-msg" role="status" aria-live="polite"></div>
+        </form>
+        <div class="pn-form">
+          <h3>Papelera secreta</h3>
+          <p class="pn-help">Se abre tocando 7 veces seguidas el logo 7TY de la barra o escribiendo 777 en el teclado. Sube aquí snippets inéditos cortos: los que no vas a sacar, ideas, cosas raras.</p>
+          <label class="fld" for="se-tr">Snippets (MP3 o M4A; puedes elegir varios)<input id="se-tr" type="file" multiple accept=".mp3,.m4a,audio/mpeg,audio/mp4,audio/x-m4a"></label>
+          <div class="pn-msg" id="se-trmsg" role="status" aria-live="polite"></div>
+          <div class="pn-items" id="se-trlist"></div>
+        </div>
+      </div>
+    </div>
+    <div class="win-body" id="pn-stats" role="tabpanel" aria-labelledby="tab-sx" hidden>
+      <div class="sx-head"><h3>Estadísticas</h3><div class="acts"><label class="fld" for="sx-range" style="grid-template-columns:auto auto;align-items:center"><select id="sx-range"><option value="30">Últimos 30 días</option><option value="7">Últimos 7 días</option><option value="all">Desde siempre</option></select></label><button class="btn btn-hot btn-sm" type="button" id="sx-go"><svg class="i"><use href="#s-spark"/></svg>Cargar</button><a class="btn btn-chrome btn-sm" id="sx-gc" href="https://www.goatcounter.com" target="_blank" rel="noopener">GoatCounter ↗</a></div></div>
+      <div class="pn-msg" id="sx-msg" role="status" aria-live="polite"></div>
+      <div class="sx-cards" id="sx-cards"></div>
+      <ul class="sx-tips" id="sx-tips"></ul>
+      <div class="sx-tbl" id="sx-tbl"></div>
+      <form class="pn-form pn-sub" id="sx-form" novalidate>
+        <h3>Conectar GoatCounter</h3>
+        <p class="pn-help">GoatCounter cuenta las visitas sin cookies ni datos personales y es gratis para webs pequeñas. Pasos: crea una cuenta en goatcounter.com con un código (por ejemplo <b>7tymusic</b>), en <i>Settings</i> activa «Allow adding visitor counts on your website», escribe aquí el código y publica. Mientras esté vacío, la web no cuenta nada.</p>
+        <div class="pn-row2">
+          <label class="fld" for="sx-code">Código de GoatCounter<input id="sx-code" maxlength="50" placeholder="7tymusic" autocomplete="off"></label>
+          <label class="switch" for="sx-me" style="align-self:end"><input type="checkbox" id="sx-me" checked> <span>No contar mis visitas en este navegador</span></label>
+        </div>
+        <button class="btn btn-chrome btn-sm" type="submit" style="justify-self:start">Aplicar código</button>
+        <div class="pn-msg" id="sx-cmsg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="win-body" id="pn-legal" role="tabpanel" aria-labelledby="tab-lg" hidden>
+      <form class="pn-form" id="le-form" novalidate>
+        <h3>Datos del titular</h3>
+        <p class="pn-help">Salen en el aviso legal y en la política de privacidad, que la ley exige en una web que vende o recoge datos. Mientras falte alguno, aparece marcado como «pendiente».</p>
+        <div class="pn-row2">
+          <label class="fld" for="le-owner">Nombre y apellidos<input id="le-owner" maxlength="80" autocomplete="off"></label>
+          <label class="fld" for="le-nif">NIF o NIE<input id="le-nif" maxlength="12" autocomplete="off"></label>
+        </div>
+        <label class="fld" for="le-addr">Domicilio (calle, CP y ciudad)<input id="le-addr" maxlength="140" autocomplete="off"></label>
+        <div class="pn-row2">
+          <label class="fld" for="le-mail">Email para temas legales<input id="le-mail" type="email" maxlength="80" placeholder="7tybooking@gmail.com"></label>
+          <label class="fld" for="le-upd">Última actualización<input id="le-upd" maxlength="30" placeholder="octubre de 2026"></label>
+        </div>
+        <button class="btn btn-hot" type="submit" id="le-go"><svg class="i"><use href="#s-spark"/></svg>Aplicar cambios</button>
+        <div class="pn-msg" id="le-msg" role="status" aria-live="polite"></div>
+        <p class="pn-help">Los textos son una base razonable, no asesoramiento legal: revísalos con tu asesoría, sobre todo cuando te des de alta como autónomo.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="pubbar" id="pubbar" hidden>
+  <div class="in">
+    <span class="st" id="pub-st" role="status" aria-live="polite">SIN CAMBIOS</span>
+    <div class="acts">
+      <a id="site-link" href="../" target="_blank" rel="noopener">Ver la web ↗</a>
+      <button class="btn btn-chrome btn-sm" type="button" id="preview">Vista previa ↗</button>
+      <button class="btn btn-chrome btn-sm" type="button" id="discard" disabled>Descartar</button>
+      <button class="btn btn-hot" type="button" id="publish" disabled><svg class="i"><use href="#i-descarga"/></svg>Publicar</button>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

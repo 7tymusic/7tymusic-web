@@ -1,0 +1,204 @@
+{
+  "beats": [
+    {
+      "id": "b308-starter",
+      "code": "308",
+      "t": "Starter",
+      "tags": [
+        "Smooth"
+      ],
+      "bpm": 115,
+      "key": "F#m",
+      "src": "media/beats/308-starter.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 308
+    },
+    {
+      "id": "b311-dancehall",
+      "code": "311",
+      "t": "Dancehall",
+      "tags": [
+        "Dancehall",
+        "Prophet"
+      ],
+      "bpm": 98,
+      "key": "Gm",
+      "src": "media/beats/311-dancehall.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 311
+    },
+    {
+      "id": "b313-hopecore",
+      "code": "313",
+      "t": "Hopecore",
+      "tags": [
+        "Hopecore"
+      ],
+      "bpm": 144,
+      "key": "C#m",
+      "src": "media/beats/313-hopecore.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 313
+    },
+    {
+      "id": "b316-club",
+      "code": "316",
+      "t": "Club",
+      "tags": [
+        "Club",
+        "Hyper"
+      ],
+      "bpm": 134,
+      "key": "Gm",
+      "src": "media/beats/316-club.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 316
+    },
+    {
+      "id": "b317-calathea",
+      "code": "317",
+      "t": "Calathea",
+      "tags": [
+        "Experimental",
+        "Dark"
+      ],
+      "bpm": 84,
+      "key": "Cm",
+      "src": "media/beats/317-calathea.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 317
+    },
+    {
+      "id": "b318-bellakona",
+      "code": "318",
+      "t": "Bellakona",
+      "tags": [
+        "Trap 2016"
+      ],
+      "bpm": 120,
+      "key": "Gm",
+      "src": "media/beats/318-bellakona.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 318
+    },
+    {
+      "id": "b319-sugarbaby",
+      "code": "319",
+      "t": "Sugarbaby",
+      "tags": [
+        "Reggaetón",
+        "Anmi"
+      ],
+      "bpm": 93,
+      "key": "A#m",
+      "src": "media/beats/319-sugarbaby.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 319
+    },
+    {
+      "id": "b320-glock9",
+      "code": "320",
+      "t": "Glock9",
+      "tags": [
+        "Trap 2016"
+      ],
+      "bpm": 120,
+      "key": "Cm",
+      "src": "media/beats/320-glock9.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 320
+    },
+    {
+      "id": "b324-lightning",
+      "code": "324",
+      "t": "Lightning",
+      "tags": [
+        "Experimental",
+        "Virtual"
+      ],
+      "bpm": 85,
+      "key": "F#m",
+      "src": "media/beats/324-lightning.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 324
+    },
+    {
+      "id": "b327-galla",
+      "code": "327",
+      "t": "Gal·la",
+      "tags": [],
+      "bpm": 143,
+      "key": "Em",
+      "src": "media/beats/327-galla.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 327
+    },
+    {
+      "id": "b328-volt",
+      "code": "328",
+      "t": "Volt",
+      "tags": [
+        "Plug",
+        "Warner"
+      ],
+      "bpm": 140,
+      "key": "Gm",
+      "src": "media/beats/328-volt.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 328
+    },
+    {
+      "id": "b329-focus",
+      "code": "329",
+      "t": "Focus",
+      "tags": [
+        "Emotional"
+      ],
+      "bpm": 147,
+      "key": "",
+      "src": "media/beats/329-focus.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 329
+    },
+    {
+      "id": "b332-sintigo",
+      "code": "332",
+      "t": "Sintigo",
+      "tags": [
+        "Reggaetón",
+        "Dancehall"
+      ],
+      "bpm": 94,
+      "key": "Fm",
+      "src": "media/beats/332-sintigo.mp3",
+      "bs": "",
+      "sold": false,
+      "hidden": false,
+      "order": 332
+    }
+  ]
+}
