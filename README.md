@@ -57,7 +57,10 @@ robots.txt            oculta /admin/ a los buscadores
 2. *Source*: **Deploy from a branch** → *Branch*: `main` / `/ (root)` → **Save**.
 3. En uno o dos minutos la web está en `https://USUARIO.github.io/7tymusic-web/`.
 
-## 3. Dominio propio (opcional, recomendado)
+## 3. Dominio propio: 7tymusic.com
+
+Esta carpeta ya viene preparada para **7tymusic.com**: incluye el archivo `CNAME`, la imagen de vista previa con la dirección completa, `sitemap.xml` y los datos de artista para Google. Solo falta hacer en GitHub y en el registrador lo de abajo (sin el paso 5, que ya está hecho).
+
 
 1. Compra el dominio (por ejemplo `7tymusic.com`) en cualquier registrador.
 2. En **Settings → Pages → Custom domain** escribe el dominio y guarda. GitHub crea el archivo `CNAME` en el repositorio.
